@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/common.css">
+    <script src="./scripts/common.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prociono&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -31,7 +33,7 @@
                 <a href="#" class="icon cart"><img src="./img/shopping_cart.png" alt="장바구니"></a>
             </div>
         </div>
-        <nav class="gnb">
+        <nav>
             <ul>
                 <li class="menu">
                     <a href="#">기프트 가이드</a>
@@ -78,17 +80,17 @@
             <source src="./video/video.mp4" type="video/mp4">
         </video>
         <div class="hero_section_txt">
-            <h2>Elevate your daily ritual</h2>
+            <h2 class="eng_title">Elevate your daily ritual</h2>
             <p>일상을 채우는 섬세한 스킨케어</p>
             <a href="#" class="btn">Shop Skincare<img src="./img/arrow1.png" alt=""></a>
         </div>
     </section>
     <div id="search_overlay">
         <div class="search_inner">
-            <button type="button" class="close_btn"><img src="./img/x.png" alt=""></button>
+            <button type="button" class="close_btn" aria-label="검색 닫기">&times;</button>
             <div class="search_box">
                 <input type="text" placeholder="Search">
-                <button type="button" class="search_icon" aria-label="검색 닫기"><img src="./img/search2.png" alt=""></button>
+                <button type="button" class="search_icon"><img src="./img/search2.png" alt=""></button>
             </div>
             <div class="search_keywords">
                 <p>인기 검색어</p>
@@ -104,22 +106,22 @@
         <div class="footer_top">
             <ul>
                 <li>
-                    <strong>Thoughtful Delivery</strong>
+                    <strong class="eng_title">Thoughtful Delivery</strong>
                     <p>신중하게 전달되는 경험</p>
                 </li>
                 <li>
-                    <strong>Complimentary Samples</strong>
+                    <strong class="eng_title">Complimentary Samples</strong>
                     <p>구매 시 제공되는 샘플</p>
                 </li>
                 <li>
-                    <strong>Carefully Packaged</strong>
+                    <strong class="eng_title">Carefully Packaged</strong>
                     <p>정성스럽게 준비된 포장</p>
                 </li>
             </ul>
         </div>
         <div class="footer_menu">
             <div class="footer_col shop">
-                <h1>Shop</h1>
+                <h3 class="eng_title">Shop</h3>
                 <ul>
                     <li><a href="#">Skincare</a></li>
                     <li><a href="#">Body & Hand</a></li>
@@ -127,14 +129,14 @@
                 </ul>
             </div>
             <div class="footer_col about">
-                <h1>About</h1>
+                <h3 class="eng_title">About</h3>
                 <ul>
                     <li><a href="#">Our Story</a></li>
                     <li><a href="#">Stores</a></li>
                 </ul>
             </div>
             <div class="footer_col support">
-                <h1>Support</h1>
+                <h3 class="eng_title">Support</h3>
                 <ul>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Shipping</a></li>
@@ -142,7 +144,7 @@
                 </ul>
             </div>
             <div class="footer_col follow">
-                <h1>Follow us</h1>
+                <h3 class="eng_title">Follow us</p>
                 <div class="sns">
                     <a href="#"><img src="./img/instagram.png" alt="인스타그램"></a>
                     <a href="#"><img src="./img/twitter.png" alt="트위터"></a>
@@ -152,7 +154,7 @@
             </div>
         </div>
         <div class="footer_bottom">
-            <p><small>&copy; Aesop</small></p>
+            <p><small class="eng_title">&copy; Aesop</small></p>
             <ul class="policy">
                 <li><a href="#">이용약관</a></li>
                 <li><a href="#">개인정보처리방침</a></li>

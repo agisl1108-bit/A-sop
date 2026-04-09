@@ -1,0 +1,247 @@
+/* CSS 공통 부분 */
+/* ================== 띠배너 ================== */
+html {
+    scrollbar-gutter: stable;
+}
+header {
+    position: absolute; top: 0; left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: 0.3s ease;
+}
+header:hover {background: #F6F1E9;}
+header:hover .icon.search img { content: url(../img/search2.png); }
+header:hover .icon.user img   { content: url(../img/person2.png); }
+header:hover .icon.cart img   { content: url(../img/shopping_cart3.png); }
+header:hover nav ul li a {color: #333;}
+header:hover #header_top .left a {color: #333;}
+header #top_banner {
+    position: relative;
+    background:#333333;
+    text-align: center; padding: 8px 40px;
+}
+header #top_banner a,
+header #top_banner a span {font-size: 0.88rem; color: #f5f5f5;}
+header #top_banner a {font-weight: 500;}
+header #top_banner a span {
+    font-weight: 600;
+    margin-left: 6px;
+    text-decoration: underline;
+}
+header #top_banner .banner_close {
+    position: absolute; top: 50%; right: 10%;
+    transform: translateY(-50%);
+    font-size: 1.50rem;
+    background: none; border: none; color: #f5f5f5;
+    cursor: pointer;
+}
+/* ================== 헤더 ================== */
+header #header_top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 60px;
+}
+header #header_top .left {
+    display: flex;
+    gap: 32px;
+}
+header #header_top .left a {font-size: 0.88rem; color: #f5f5f5; font-weight: 500;}
+header #header_top h1 {}
+header #header_top h1 a {}
+header #header_top h1 a img {width: 100%;}
+header #header_top .right {
+    display: flex;
+    gap: 22px;
+}
+header #header_top .right .icon {}
+header #header_top .right .icon img {}
+header #header_top .right .icon img:hover {}
+header #header_top .right .search {}
+header #header_top .right .user {}
+header #header_top .right .cart {}
+
+/* ================== 메뉴 ================== */
+header nav {
+    margin-top: 10px;
+    border-bottom: none;
+    position: relative;
+}
+header:hover nav {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+header nav ul {
+    display: flex; justify-content: center;
+    gap: 32px;
+    padding-bottom: 20px;
+}
+header nav ul li {padding-bottom: 10px;}
+header nav ul li a {
+    color: #f5f5f5; font-size: 0.88rem; font-weight: 500; 
+    position: relative;
+    z-index: 2;
+    display: inline-block; padding-bottom: 10px;
+}
+header nav ul li a::after {
+    content: "";
+    position: absolute; left: 50%; bottom: 0;
+    width: 0; height: 2px;
+    background: currentColor;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+header nav ul li a:hover::after {width: 100%;}
+header nav ul .menu {}
+header nav ul .menu a {}
+header nav ul .menu .mega_menu_bg {
+    position: absolute; top: 100%; left: 0; width: 100%;
+    background: #F6F1E9;
+    padding: 50px 120px;
+    z-index: 90;
+    display: flex; justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+header nav ul .menu:hover .mega_menu_bg {
+    display: flex; justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+header nav ul .menu .mega_menu_bg .mega_menu {}
+header nav ul .menu .mega_menu_bg .mega_menu p {color: #222; font-size: 0.88rem; font-weight: 600; margin-bottom: 15px;}
+header nav ul .menu .mega_menu_bg .mega_menu ul {}
+header nav ul .menu .mega_menu_bg .mega_menu ul li {}
+header nav ul .menu .mega_menu_bg .mega_menu ul li a {color: #333; font-size: 0.88rem; font-weight: 500;}
+header nav ul .menu .mega_menu_bg .mega_right {display: flex; gap: 42px;}
+header nav ul .menu .mega_menu_bg .mega_right .mega_item {}
+header nav ul .menu .mega_menu_bg .mega_right .mega_item a {}
+header nav ul .menu .mega_menu_bg .mega_right .mega_item a img {margin-bottom: 10px;}
+header nav ul .menu .mega_menu_bg .mega_right .mega_item a p {font-weight: 600; font-size: 0.88rem;}
+
+/* ================== 히어로 ================== */
+#hero_section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#hero_section::before {
+    content: "";
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+#hero_section video {
+    position: absolute; top: 50%; left: 50%; width: 100%;
+    transform:  translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+#hero_section .hero_section_txt {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%); text-align: center;
+    z-index: 2;
+}
+#hero_section .hero_section_txt .eng_title {color: #fff; font-size: 2.00rem; margin-bottom: 10px;}
+#hero_section .hero_section_txt p {color: #f5f5f5; font-size: 1.38rem; margin-bottom: 22px;}
+#hero_section .hero_section_txt .btn {
+    color: #f5f5f5;
+    display: inline-flex; align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+#hero_section .hero_section_txt .btn img {
+    transform: translateY(1px);
+    transition: transform 0.3s ease;
+}
+#hero_section .hero_section_txt .btn:hover {text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);}
+#hero_section .hero_section_txt .btn:hover img {transform: translateX(6px);}
+
+/* ================== 검색 ================== */
+#search_overlay {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex; align-items: flex-start; justify-content: flex-end;
+    padding: 60px 0 0 120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 999;
+}
+/* 열렸을 때 */
+#search_overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+#search_overlay .search_inner {
+    background: #F6F1E9;
+    width: 80%;
+    max-width: 900px;
+    padding: 40px;
+    position: relative;
+}
+#search_overlay .search_inner .close_btn {
+    position: absolute; top: 10px; right: 20px;
+    font-size: 1.50rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#search_overlay .search_inner .close_btn img {}
+#search_overlay .search_inner .search_box {
+    display: flex; align-items: center;
+    border-bottom: 2px solid #111;
+    margin-bottom: 30px;
+}
+#search_overlay .search_inner .search_box input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 1.38rem;
+    padding: 10px 0;
+    outline: none;
+
+}
+#search_overlay .search_inner .search_box .search_icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#search_overlay .search_inner .search_keywords {}
+#search_overlay .search_inner .search_keywords p {font-size: 1.38rem; font-weight: 600; margin-bottom: 22px;}
+#search_overlay .search_inner .search_keywords ul {}
+#search_overlay .search_inner .search_keywords ul li {margin-bottom: 12px;}
+#search_overlay .search_inner .search_keywords ul li a {font-size: 0.88rem; color: #666;}
+
+/* ================== 푸터 ================== */
+footer {}
+footer .footer_top {}
+footer .footer_top ul {}
+footer .footer_top ul li {}
+footer .footer_top ul li .eng_title {}
+footer .footer_top ul li p {}
+footer .footer_menu {}
+footer .footer_menu .footer_col {}
+footer .footer_menu .footer_col .eng_title {}
+footer .footer_menu .footer_col ul {}
+footer .footer_menu .footer_col ul li {}
+footer .footer_menu .footer_col ul li a {}
+footer .footer_menu .follow {}
+footer .footer_menu .follow .eng_title {}
+footer .footer_menu .follow .sns {}
+footer .footer_menu .follow .sns a {}
+footer .footer_menu .follow .sns a img {}
+footer .footer_bottom {}
+footer .footer_bottom p {}
+footer .footer_bottom p .eng_title {}
+footer .footer_bottom .policy {}
+footer .footer_bottom .policy li {}
+footer .footer_bottom .policy li a {}
+
+
+/* ================== 공통 글꼴 ================== */
+.eng_title {font-family: 'Prociono', serif; line-height: 1.4;}
