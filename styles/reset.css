@@ -13,7 +13,7 @@ table,thead,tbody,tfoot,tr,td,th {
     font-weight:400;/* 피그마 글자 굵기 400 == regular */
     font-style:normal;
     color:#000;
-    font-family:'Noto Sans KR',sans-serif;
+    font-family:'Pretendard',sans-serif;
 }
 /* 개별 태그 초기값 */
 a {text-decoration:none;}

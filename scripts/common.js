@@ -38,3 +38,32 @@ function closeSearch() {
     overlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+// 띠배너 닫기
+const closeBtn1 = document.querySelector('.banner_close');
+const banner = document.getElementById('top_banner');
+closeBtn1.addEventListener('click', () => {
+    banner.style.display = 'none';
+});
+
+// 슬라이드
+const items = document.querySelectorAll('#top_banner .banner_item');
+let index = 0;
+
+// 첫 번째 보이게
+items[0].classList.add('active');
+
+setInterval(() => {
+    const current = items[index];
+    current.classList.remove('active');
+    current.classList.add('prev');
+    index = (index + 1) % items.length;
+    const next = items[index];
+    next.classList.add('active');
+    setTimeout(() => {
+        current.classList.remove('prev');
+    }, 500);
+    }, 10000);
+});
