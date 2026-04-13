@@ -282,10 +282,21 @@ footer .inner .footer_menu .footer_left .footer_col .eng_title {
 footer .inner .footer_menu .footer_left .footer_col ul {}
 footer .inner .footer_menu .footer_left .footer_col ul li {margin-bottom: 10px;}
 footer .inner .footer_menu .footer_left .footer_col ul li a {
+    position: relative;
     font-size: 0.88rem;
     color: #999;
-    transition: 0.2s;
+    transition: color 0.3s ease;
 }
+footer .inner .footer_menu .footer_left .footer_col ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -3px;
+    width: 0; height: 1px;
+    background: #EAE6DF;
+    transition: width 0.3s ease;
+}
+footer .inner .footer_menu .footer_left .footer_col ul li a:hover {color: #EAE6DF;}
+footer .inner .footer_menu .footer_left .footer_col ul li a:hover::after {width: 100%;}
 footer .inner .footer_menu .footer_right {max-width: 200px;}
 footer .inner .footer_menu .footer_right .footer_col .eng_title {
     font-size: 1.13rem;
@@ -319,6 +330,7 @@ footer .footer_bottom .policy li a {
     color: #EAE6DF;
     transition: 0.2s;
 }
+footer .footer_bottom .policy li a:hover {text-decoration: underline;}
 
 
 /* ================== 공통 글꼴 ================== */

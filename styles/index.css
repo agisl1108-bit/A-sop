@@ -1,0 +1,69 @@
+/* css 메인 부분 */
+/* ================== 카테고리 ================== */
+.category {width: 100%;}
+.category .category_swiper {}
+/* ================== 슬라이드 기본 ================== */
+.category .category_swiper .swiper-wrapper {display: flex; gap: 0 !important;}
+.category .category_swiper .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 25% !important;
+    height: 839px;
+    overflow: hidden;
+    margin-right: 0 !important;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+.category .category_swiper .swiper-wrapper .swiper-slide a {
+    display: block;
+    width: 100%; height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.category .category_swiper .swiper-wrapper .swiper-slide a .category_txt {
+    position: absolute;
+    left: 48px; bottom: 70px;
+    transition: 0.4s ease;
+}
+.category .category_swiper .swiper-wrapper .swiper-slide a .category_txt .eng_title {
+    font-size: 1.75rem;
+    color: #fff;
+    padding-bottom: 14px;
+}
+.category .category_swiper .swiper-wrapper .swiper-slide a .category_txt p {
+    font-size: 1.38rem;
+    color: #ddd;
+}
+/* ================== 배경 이미지 ================== */
+.category .category_swiper .swiper-wrapper .skincare::before {
+    background-image: url(../img/product/category_section1.jpg);
+}
+.category .category_swiper .swiper-wrapper .body::before {
+    background-image: url(../img/product/category_section2.jpg);
+}
+.category .category_swiper .swiper-wrapper .hair::before {
+    background-image: url(../img/product/category_section3.jpg);
+}
+.category .category_swiper .swiper-wrapper .fragrance::before {
+    background-image: url(../img/product/category_section4.jpg);
+}
+
+/* ================== 호버 효과 ================== */
+.category .category_swiper .swiper-wrapper .swiper-slide:hover::before {transform: scale(1.04);}
+.category .category_swiper .swiper-wrapper .swiper-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease;
+    z-index: 1;
+}
+.category .category_swiper .swiper-wrapper .swiper-slide:hover::after {background: rgba(0, 0, 0, 0.32);}
+.category .category_swiper .swiper-wrapper .swiper-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    z-index: 0;
+}
