@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Prociono&display=swap" rel="stylesheet">
     <script src="./scripts/common.js" defer></script>
     <script src="./scripts/index.js" defer></script>
     <!--swiper 필수 css cdn 연결-->
@@ -162,17 +162,27 @@
             <div class="curated_top">
                 <h2 class="eng_title">Curated Essentials</h2>
                 <ul class="category_tab">
-                    <li class="active" data-tab="body">Body</li>
+                    <li data-tab="body">Body</li>
                     <li data-tab="fragrance">Fragrance</li>
                     <li data-tab="skincare">Skincare</li>
                     <li data-tab="hair">Hair</li>
                 </ul>
             </div>
-            <div class="swiper curated_swiper body">
+            <div class="swiper curated_swiper body active">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide product1" data-category="body">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest1.jpg" alt="">
+                            <div class="banner_item">
+                                <img src="./img/product/commodity_of_interest1.jpg" class="img_default" alt="">
+                                <img src="./img/product/hover_img1.jpg" class="img_hover" alt="">
+                                <div class="banner_txt">
+                                    <p>상쾌하게 깨우는 바디 클렌저</p>
+                                    <span class="more">
+                                        Discover More
+                                        <img src="./img/arrow1.png" alt="">
+                                    </span>
+                                </div>
+                            </div>
                             <h3 class="eng_title">Geranium Leaf Body Cleanser</h3>
                             <p class="price">₩57,000</p>
                             <p class="product_desc">Hydrating · Refreshing</p>
@@ -180,7 +190,17 @@
                     </div>
                     <div class="swiper-slide product2" data-category="body">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest2.jpg" alt="">
+                            <div class="banner_item">
+                                <img src="./img/product/commodity_of_interest2.jpg" class="img_default" alt="">
+                                <img src="./img/product/hover_img2.jpg" class="img_hover" alt="">
+                                <div class="banner_txt">
+                                    <p>상쾌하게 깨우는 바디 클렌저</p>
+                                    <span class="more">
+                                        Discover More
+                                        <img src="./img/arrow1.png" alt="">
+                                    </span>
+                                </div>
+                            </div>
                             <h3 class="eng_title">Resurrection Aromatique Hand Balm</h3>
                             <p class="price">₩39,000</p>
                             <p class="product_desc">Nourishing · Softening</p>
@@ -188,7 +208,17 @@
                     </div>
                     <div class="swiper-slide product3" data-category="body">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest3.jpg" alt="">
+                            <div class="banner_item">
+                                <img src="./img/product/commodity_of_interest3.jpg" class="img_default" alt="">
+                                <img src="./img/product/hover_img3.jpg" class="img_hover" alt="">
+                                <div class="banner_txt">
+                                    <p>상쾌하게 깨우는 바디 클렌저</p>
+                                    <span class="more">
+                                        Discover More
+                                        <img src="./img/arrow1.png" alt="">
+                                    </span>
+                                </div>
+                            </div>
                             <h3 class="eng_title">Rind Concentrate Body Balm</h3>
                             <p class="price">₩63,000</p>
                             <p class="product_desc">Hydrating · Balancing</p>
@@ -196,121 +226,211 @@
                     </div>
                     <div class="swiper-slide product4" data-category="body">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest4.jpg" alt="">
+                            <div class="banner_item">
+                                <img src="./img/product/commodity_of_interest4.jpg" class="img_default" alt="">
+                                <img src="./img/product/hover_img4.jpg" class="img_hover" alt="">
+                                <div class="banner_txt">
+                                    <p>상쾌하게 깨우는 바디 클렌저</p>
+                                    <span class="more">
+                                        Discover More
+                                        <img src="./img/arrow1.png" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="eng_title">Nurture Bar Soap</h3>
+                            <p class="price">₩30,000</p>
+                            <p class="product_desc">Cleansing · Gentle</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide product5" data-category="body">
+                        <a href="#">
+                            <div class="banner_item">
+                                <img src="./img/product/commodity_of_interest5.jpg" class="img_default" alt="">
+                                <img src="./img/product/hover_img1.jpg" class="img_hover" alt="">
+                                <div class="banner_txt">
+                                    <p>상쾌하게 깨우는 바디 클렌저</p>
+                                    <span class="more">
+                                        Discover More
+                                        <img src="./img/arrow1.png" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="eng_title">Geranium Leaf Body Cleanser</h3>
+                            <p class="price">₩57,000</p>
+                            <p class="product_desc">Hydrating · Refreshing</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide product6" data-category="body">
+                        <a href="#">
+                            <div class="banner_item">
+                                <img src="./img/product/commodity_of_interest6.jpg" class="img_default" alt="">
+                                <img src="./img/product/hover_img2.jpg" class="img_hover" alt="">
+                                <div class="banner_txt">
+                                    <p>상쾌하게 깨우는 바디 클렌저</p>
+                                    <span class="more">
+                                        Discover More
+                                        <img src="./img/arrow1.png" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="eng_title">Resurrection Aromatique Hand Balm</h3>
+                            <p class="price">₩39,000</p>
+                            <p class="product_desc">Nourishing · Softening</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide product7" data-category="body">
+                        <a href="#">
+                            <div class="banner_item">
+                                <img src="./img/product/commodity_of_interest7.jpg" class="img_default" alt="">
+                                <img src="./img/product/hover_img3.jpg" class="img_hover" alt="">
+                                <div class="banner_txt">
+                                    <p>상쾌하게 깨우는 바디 클렌저</p>
+                                    <span class="more">
+                                        Discover More
+                                        <img src="./img/arrow1.png" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="eng_title">Rind Concentrate Body Balm</h3>
+                            <p class="price">₩63,000</p>
+                            <p class="product_desc">Hydrating · Balancing</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide product8" data-category="body">
+                        <a href="#">
+                            <div class="banner_item">
+                                <img src="./img/product/commodity_of_interest8.jpg" class="img_default" alt="">
+                                <img src="./img/product/hover_img4.jpg" class="img_hover" alt="">
+                                <div class="banner_txt">
+                                    <p>상쾌하게 깨우는 바디 클렌저</p>
+                                    <span class="more">
+                                        Discover More
+                                        <img src="./img/arrow1.png" alt="">
+                                    </span>
+                                </div>
+                            </div>
                             <h3 class="eng_title">Nurture Bar Soap</h3>
                             <p class="price">₩30,000</p>
                             <p class="product_desc">Cleansing · Gentle</p>
                         </a>
                     </div>
                 </div>
+                <!-- 진행바 -->
+                <div class="swiper-scrollbar"></div>
             </div>
             <div class="swiper curated_swiper fragrance">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide product1" data-category="fragrance">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest1.jpg" alt="">
-                            <h3 class="eng_title">Geranium Leaf Body Cleanser</h3>
-                            <p class="price">₩57,000</p>
-                            <p class="product_desc">Hydrating · Refreshing</p>
+                            <img src="./img/product/perfume1.jpg" alt="">
+                            <h3 class="eng_title">Gloam Eau de Parfum </h3>
+                            <p class="price">₩195,000</p>
+                            <p class="product_desc">Warm · Spicy · Woody</p>
                         </a>
                     </div>
                     <div class="swiper-slide product2" data-category="fragrance">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest2.jpg" alt="">
-                            <h3 class="eng_title">Resurrection Aromatique Hand Balm</h3>
-                            <p class="price">₩39,000</p>
-                            <p class="product_desc">Nourishing · Softening</p>
+                            <img src="./img/product/perfume2.jpg" alt="">
+                            <h3 class="eng_title">Karst Eau de Parfum</h3>
+                            <p class="price">₩195,000</p>
+                            <p class="product_desc">Fresh · Mineral · Marine</p>
                         </a>
                     </div>
                     <div class="swiper-slide product3" data-category="fragrance">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest3.jpg" alt="">
-                            <h3 class="eng_title">Rind Concentrate Body Balm</h3>
-                            <p class="price">₩63,000</p>
-                            <p class="product_desc">Hydrating · Balancing</p>
+                            <img src="./img/product/perfume3.jpg" alt="">
+                            <h3 class="eng_title">Tacit Eau de Parfum</h3>
+                            <p class="price">₩199,000</p>
+                            <p class="product_desc">Citrus · Green · Herbaceous</p>
                         </a>
                     </div>
                     <div class="swiper-slide product4" data-category="fragrance">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest4.jpg" alt="">
-                            <h3 class="eng_title">Nurture Bar Soap</h3>
-                            <p class="price">₩30,000</p>
-                            <p class="product_desc">Cleansing · Gentle</p>
+                            <img src="./img/product/perfume4.jpg" alt="">
+                            <h3 class="eng_title">Eidesis Eau de Parfum</h3>
+                            <p class="price">₩210,000</p>
+                            <p class="product_desc">Woody · Spicy · Resinous</p>
                         </a>
                     </div>
                 </div>
+                <!-- 진행바 -->
+                <div class="swiper-scrollbar"></div>
             </div>
             <div class="swiper curated_swiper skincare">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide product1" data-category="skincare">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest1.jpg" alt="">
-                            <h3 class="eng_title">Geranium Leaf Body Cleanser</h3>
-                            <p class="price">₩57,000</p>
-                            <p class="product_desc">Hydrating · Refreshing</p>
+                            <img src="./img/product/skincare1.jpg" alt="">
+                            <h3 class="eng_title">Lucent Facial Refiner</h3>
+                            <p class="price">₩97,000</p>
+                            <p class="product_desc">Smoothing · Radiance</p>
                         </a>
                     </div>
                     <div class="swiper-slide product2" data-category="skincare">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest2.jpg" alt="">
-                            <h3 class="eng_title">Resurrection Aromatique Hand Balm</h3>
-                            <p class="price">₩39,000</p>
-                            <p class="product_desc">Nourishing · Softening</p>
+                            <img src="./img/product/skincare2.jpg" alt="">
+                            <h3 class="eng_title">Primrose Facial Hydrating Cream</h3>
+                            <p class="price">₩73,000</p>
+                            <p class="product_desc">Hydrating · Softening</p>
                         </a>
                     </div>
                     <div class="swiper-slide product3" data-category="skincare">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest3.jpg" alt="">
-                            <h3 class="eng_title">Rind Concentrate Body Balm</h3>
-                            <p class="price">₩63,000</p>
-                            <p class="product_desc">Hydrating · Balancing</p>
+                            <img src="./img/product/skincare3.jpg" alt="">
+                            <h3 class="eng_title">Lucent Facial Concentrate</h3>
+                            <p class="price">₩89,000</p>
+                            <p class="product_desc">Brightening · Balancing</p>
                         </a>
                     </div>
                     <div class="swiper-slide product4" data-category="skincare">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest4.jpg" alt="">
-                            <h3 class="eng_title">Nurture Bar Soap</h3>
-                            <p class="price">₩30,000</p>
-                            <p class="product_desc">Cleansing · Gentle</p>
+                            <img src="./img/product/skincare4.jpg" alt="">
+                            <h3 class="eng_title">B & Tea Balancing Toner</h3>
+                            <p class="price">₩45,000</p>
+                            <p class="product_desc">Balancing · Refreshing</p>
                         </a>
                     </div>
                 </div>
+                <!-- 진행바 -->
+                <div class="swiper-scrollbar"></div>
             </div>
             <div class="swiper curated_swiper hair">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide product1" data-category="hair">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest1.jpg" alt="">
-                            <h3 class="eng_title">Geranium Leaf Body Cleanser</h3>
-                            <p class="price">₩57,000</p>
-                            <p class="product_desc">Hydrating · Refreshing</p>
+                            <img src="./img/product/hair1.jpg" alt="">
+                            <h3 class="eng_title">Classic Shampoo</h3>
+                            <p class="price">₩45,000</p>
+                            <p class="product_desc">Cleansing · Balancing</p>
                         </a>
                     </div>
                     <div class="swiper-slide product2" data-category="hair">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest2.jpg" alt="">
-                            <h3 class="eng_title">Resurrection Aromatique Hand Balm</h3>
-                            <p class="price">₩39,000</p>
+                            <img src="./img/product/hair2.jpg" alt="">
+                            <h3 class="eng_title">Classic Conditioner</h3>
+                            <p class="price">₩47,000</p>
                             <p class="product_desc">Nourishing · Softening</p>
                         </a>
                     </div>
                     <div class="swiper-slide product3" data-category="hair">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest3.jpg" alt="">
-                            <h3 class="eng_title">Rind Concentrate Body Balm</h3>
-                            <p class="price">₩63,000</p>
-                            <p class="product_desc">Hydrating · Balancing</p>
+                            <img src="./img/product/hair3.jpg" alt="">
+                            <h3 class="eng_title">Rose Hair & Scalp Moisturising Masque</h3>
+                            <p class="price">₩53,000</p>
+                            <p class="product_desc">Hydrating · Repairing</p>
                         </a>
                     </div>
                     <div class="swiper-slide product4" data-category="hair">
                         <a href="#">
-                            <img src="./img/product/commodity_of_interest4.jpg" alt="">
-                            <h3 class="eng_title">Nurture Bar Soap</h3>
-                            <p class="price">₩30,000</p>
-                            <p class="product_desc">Cleansing · Gentle</p>
+                            <img src="./img/product/hair4.jpg" alt="">
+                            <h3 class="eng_title">Shine Hair & Beard Oil</h3>
+                            <p class="price">₩49,000</p>
+                            <p class="product_desc">Smoothing · Nourishing</p>
                         </a>
                     </div>
                 </div>
+                <!-- 진행바 -->
+                <div class="swiper-scrollbar"></div>
             </div>
         </section>
     </main>

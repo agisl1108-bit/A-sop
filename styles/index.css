@@ -67,3 +67,148 @@
     transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
     z-index: 0;
 }
+
+/* ================== Curated ================== */
+.curated {
+    width: 100%;
+    padding: 100px 0px;
+    background: #F6F1E9;
+}
+/* ================== 상단 영역 ================== */
+.curated .curated_top {
+    display: flex; justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 50px;
+    margin-bottom: 60px;
+}
+.curated .curated_top .eng_title {
+    font-size: 2.00rem;
+    color: #333;
+}
+/* ================== 카테고리 탭 ================== */
+.curated .category_tab {
+    display: flex;
+    gap: 32px;
+}
+.curated .category_tab li {
+    font-size: 1.13rem;
+    color: #999;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease;
+}
+.curated .category_tab li.active {color: #555;}
+.curated .category_tab li:hover {color: #555;}
+/* 탭 밑줄 */
+.curated .category_tab li::after {
+    content: "";
+    position: absolute; left: 0; bottom: -6px;
+    width: 0; height: 1px;
+    background: #555;
+    transition: 0.3s;
+}
+.curated .category_tab li.active::after {width: 100%;}
+/* ================== Swiper 영역 ================== */
+.curated .curated_swiper {
+    display: none;
+    width: 100%;
+    padding: 0 50px;
+    overflow: hidden;
+}
+.curated .curated_swiper.active {
+    display: block;
+    animation: fadeIn 1.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px);}
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ================== 슬라이드 구조 ================== */
+.curated .curated_swiper .swiper-wrapper {}
+.curated .curated_swiper .swiper-wrapper .swiper-slide {
+    overflow: hidden;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide:last-child {padding-right: 0;}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a {
+    display: block;
+}
+/* ================== 이미지 카드 ================== */
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item {
+    position: relative;
+    overflow: hidden;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item .img_default {width: 100%;
+    display: block;
+    transition: transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item .img_hover {
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item:hover .img_hover {opacity: 1;}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+    z-index: 1;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item:hover::after {opacity: 1;}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item .banner_txt {
+    position: absolute;
+    left: 50%; bottom: 40px;
+    transform: translate(-50%, 10px);
+    text-align: center;
+    opacity: 0;
+    transition: 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+    z-index: 2;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item:hover .banner_txt {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item .banner_txt p {
+    margin-bottom: 22px;
+    color: #fff;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item .banner_txt .more {
+    font-size: 0.88rem;
+    color: #fff;
+    display: inline-flex; align-items: center;
+    gap: 8px;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item .banner_txt .more img {
+    width: 24px;
+    transition: transform 0.4s ease;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .banner_item .banner_txt .more:hover img {transform: translateX(6px);}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .eng_title {
+    color: #333;
+    font-size: 1.06rem;
+    margin: 10px 0 5px;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .price {
+    font-size: 1.13rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 16px;
+}
+.curated .curated_swiper .swiper-wrapper .swiper-slide a .product_desc {
+    font-size: 0.75rem;
+    color: #666;
+}
+.curated .curated_swiper .swiper-scrollbar {
+    width: 360px;
+    height: 2px;
+    background: #fff;
+    margin: 60px auto 0;
+}
+.curated .curated_swiper .swiper-scrollbar-drag {
+    background: #111;
+    height: 2px;
+}
