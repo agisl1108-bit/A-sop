@@ -91,6 +91,7 @@
     gap: 32px;
 }
 .curated .category_tab li {
+    display: inline-block;
     font-size: 1.13rem;
     color: #999;
     cursor: pointer;
@@ -106,14 +107,16 @@
     width: 0; height: 1px;
     background: #555;
     transition: 0.3s;
+    display: block;
 }
 .curated .category_tab li.active::after {width: 100%;}
 /* ================== Swiper 영역 ================== */
 .curated .curated_swiper {
     display: none;
     width: 100%;
-    padding: 0 50px;
+    padding: 0 50px 80px;
     overflow: hidden;
+    position: relative;
 }
 .curated .curated_swiper.active {
     display: block;
@@ -128,7 +131,6 @@
 .curated .curated_swiper .swiper-wrapper .swiper-slide {
     overflow: hidden;
 }
-.curated .curated_swiper .swiper-wrapper .swiper-slide:last-child {padding-right: 0;}
 .curated .curated_swiper .swiper-wrapper .swiper-slide a {
     display: block;
 }
@@ -203,6 +205,8 @@
     color: #666;
 }
 .curated .curated_swiper .swiper-scrollbar {
+    position: absolute; left: 50%; bottom: 20px;
+    transform: translateX(-50%);
     width: 360px;
     height: 2px;
     background: #fff;
@@ -211,4 +215,74 @@
 .curated .curated_swiper .swiper-scrollbar-drag {
     background: #111;
     height: 2px;
+}
+/* ================== 화살표 ================== */
+.curated .curated_swiper .swiper-button-prev,
+.curated .curated_swiper .swiper-button-next {
+    width: 52px; height: 52px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(4px);
+    background-repeat: 50%;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: auto;
+}
+.curated .curated_swiper:hover .swiper-button-prev,
+.curated .curated_swiper:hover .swiper-button-next {opacity: 1;}
+.curated .curated_swiper .swiper-button-prev {left: 10px;}
+.curated .curated_swiper .swiper-button-next {right: 10px;}
+.curated .curated_swiper .swiper-button-prev::after,
+.curated .curated_swiper .swiper-button-next::after {display: none;}
+.curated .curated_swiper .swiper-button-prev.swiper-button-disabled,
+.curated .curated_swiper .swiper-button-next.swiper-button-disabled {
+    opacity: 0.2 !important;
+    pointer-events: none;
+}
+.curated .curated_swiper .swiper-button-prev .swiper-navigation-icon,
+.curated .curated_swiper .swiper-button-next .swiper-navigation-icon {color: #333; width: 30px; height: 30px;}
+
+/* ================== 브랜드 소개 ================== */
+.philosophy {
+    width: 100%;
+    padding: 100px 0 0 80px;
+    background: #EDE6DC;
+    display: flex;
+    justify-content: space-between; align-items: flex-start;
+    gap: 80px;
+}
+.philosophy .txt {}
+.philosophy .txt .sub_title {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+.philosophy .txt .eng_title {
+    font-size: 1.50rem;
+    color: #333;
+    margin-bottom: 12px;
+}
+.philosophy .txt .desc {
+    font-size: 1.13rem;
+    color: #666;
+    margin-bottom: 42px;
+}
+.philosophy .txt .more {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    transition: 0.3s;
+}
+.philosophy .txt .more img {
+    width: 18px;
+    transition: transform 0.3s ease;
+}
+.philosophy .txt .more:hover img {transform: translateX(6px);}
+.philosophy .img_box {width: 50%;}
+.philosophy .img_box img {
+    width: 100%; 
+    display: block; 
+    object-fit: cover;
 }
