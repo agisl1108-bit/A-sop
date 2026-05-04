@@ -286,3 +286,249 @@
     display: block; 
     object-fit: cover;
 }
+
+/* ================== Recommended ================== */
+.recommend {
+    width: 100%;
+    padding: 120px 0;
+    background: #F6F1E9;
+}
+
+/* 상단 */
+.recommend .recommend_top {
+    position: relative;
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+/* 제목 가운데 */
+.recommend .recommend_top .title_wrap {
+    display: inline-block;
+}
+
+.recommend .recommend_top h2 {
+    color: #333;
+    font-size: 2.00rem;
+}
+
+.recommend .title_wrap p {
+    color: #666;
+    margin-top: 12px;
+}
+
+.recommend .view_all {
+    position: absolute;
+    right: 50px; top: 40%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+}
+.recommend .view_all:hover {color: #333;}
+
+.recommend .view_all img {
+    width: 18px;
+    transition: 0.3s;
+}
+
+.recommend .view_all:hover img {
+    transform: translateX(6px);
+}
+
+/* ================== 탭 ================== */
+.recommend_tab_wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 54px;
+}
+
+.recommend_tab {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.recommend_tab li {
+    color: #999;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 8px;
+    transition: 0.3s;
+}
+
+.recommend_tab li.active {
+    color: #333;
+}
+
+.recommend_tab li.active::after {
+    width: 100%;
+}
+
+/* 움직이는 바 */
+.tab_indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: #333;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* ================== 상품 리스트 ================== */
+.recommend_list {
+    display: none;
+    padding: 0 50px;
+}
+
+.recommend_list.active {
+    display: block;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(8px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* 그리드 */
+.product_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 20px;
+    margin-bottom: 54px;
+}
+
+/* ================== 상품 카드 ================== */
+.product_item a {
+    display: block;
+}
+
+/* 이미지 */
+.product_item img {
+    width: 100%;
+    display: block;
+    margin-bottom: 14px;
+    transition: transform 0.6s ease;
+}
+
+.product_item:hover img {
+    transform: scale(1.03);
+}
+
+/* 텍스트 */
+.product_name {
+    font-size: 1.19rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product_price {
+    font-size: 1.06rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.product_desc {
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+/* 평점 */
+.product_rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: #666;
+}
+
+.product_rating .star {
+    color: #555;
+}
+
+.product_rating .rating_score {
+    color: #666;
+}
+.product_rating .review_text {
+    font-size: 0.75rem;
+    margin-left: 6px;
+    color: #666;
+}
+
+/* ================== 이벤트 섹션 ================== */
+.recommend_event {
+    margin-top: 100px;
+    position: relative;
+    background: #E9E0CC;
+}
+
+.event_item {
+    display: none;
+    align-items: stretch;
+    min-height: 420px;
+    gap: 60px;
+}
+
+.event_item.active {
+    display: flex;
+    animation: fadeIn 0.8s ease;
+}
+
+/* 이미지 */
+.event_item img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 텍스트 */
+.event_item .txt {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 22px;
+}
+
+.event_item .txt .sub {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.event_item .txt h3 {
+    font-size: 2.63rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event_item .txt .event_desc {
+    color: #666;
+    margin-bottom: 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+/* 버튼 */
+.event_item .more {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 45px;
+}
+
+.event_item .more img {
+    width: 18px;
+    transition: 0.3s;
+    }
+
+.event_item .more:hover img {
+    transform: translateX(6px);
+}
