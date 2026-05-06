@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aēsop | 상품 페이지</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/service.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Prociono&display=swap" rel="stylesheet">
+    <!-- Swiper (한 번만!) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- JS -->
+    <script src="./scripts/common.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/service.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <main>
+        <!-- ================== 상품 상단 ================== -->
+        <section class="product_top">
+            <!-- 이미지 -->
+            <div class="product_img">
+                <img src="./img/service/product1.jpg" alt="Geranium Leaf Body Cleanser">
+            </div>
+            <!-- 정보 -->
+            <div class="product_info">
+                <h2 class="product_name eng_title">Geranium Leaf Body Cleanser</h2>
+                <p class="product_sub">Hydrating · Refreshing</p>
+                <p class="product_price">₩57,000</p>
+                <p class="product_desc">
+                    피부 균형을 유지하면서 노폐물을 부드럽게 제거하는 클렌징 포뮬라<br>
+                    기존 비누에 대한 좋은 대안으로, 부드럽게 잔여물을 제거하고 생기를 부여하는 클렌징 젤
+                </p>
+                <!-- 옵션 -->
+                <ul class="product_option">
+                    <li>
+                        <label>
+                            <input type="radio" name="size">
+                            <span>100 mL</span>
+                            <span>₩9,900</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="size">
+                            <span>250 mL</span>
+                            <span>₩23,000</span>
+                        </label>
+                    </li>
+                    <li class="active">
+                        <label>
+                            <input type="radio" name="size" checked>
+                            <span>500 mL</span>
+                            <span>₩57,000</span>
+                        </label>
+                    </li>
+                </ul>
+                <!-- 버튼 -->
+                <div class="product_btn">
+                    <a href="#" class="eng_title">
+                        <span>Add to Bag</span>
+                        <img src="./img/arrow2.png" alt="">
+                    </a>
+                    <a href="#" class="eng_title">
+                        <span>Purchase</span>
+                        <img src="./img/arrow2.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- ================== 상세 이미지 + 설명 ================== -->
+        <section class="product_detail_content">
+            <!-- 왼쪽 영상 -->
+            <div class="detail_media">
+                <video autoplay muted loop playsinline>
+                    <source src="./video/v-082b6490-e860-438b-b37e-64862e1ea0f8_original.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="detail_text">
+                <h3 class="eng_title">Description</h3>
+                <p>
+                    피부 타입: 모든 피부 타입<br>
+                    향: 그린 · 시트러스 · 허브
+                </p>
+                <div class="detail_info">
+                    <div>
+                        <h4 class="eng_title">ACTIVE INGREDIENTS</h4>
+                        <p>제라늄 · 만다린</p>
+                    </div>
+                    <div>
+                        <h4 class="eng_title">TEXTURE</h4>
+                        <p>부드러운 젤 타입</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================== 사용법 ================== -->
+        <section class="product_usage">
+            <div class="usage_wrap">
+                <!-- 왼쪽 이미지 -->
+                <div class="usage_img">
+                    <img src="./img/service/image.jpg" alt="">
+                </div>
+                <!-- 오른쪽 텍스트 -->
+                <div class="usage_text">
+                    <h3 class="eng_title">Instructions</h3>
+                    <p>손 또는 샤워 볼에 충분히 덜어 물에 잘 풀어 거품을 낸 후 헹궈줍니다.</p>
+                    <div class="usage_bottom">
+                        <div>
+                            <h4 class="eng_title">Usage</h4>
+                            <p>전신 클렌징</p>
+                        </div>
+                        <div>
+                            <h4 class="eng_title">Texture</h4>
+                            <p>투명한 젤 타입</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================== 풀 영상 ================== -->
+        <section class="product_banner">
+            <video autoplay muted loop playsinline>
+                <source src="./video/detail_full.mp4" type="video/mp4">
+            </video>
+        </section>
+        <!-- ================== 추천 상품 ================== -->
+        <section class="product_related">
+            <h3 class="eng_title">See also</h3>
+            <div class="related_list">
+                <div class="related_item">
+                    <img src="./img/service/product2.jpg" alt="">
+                    <p class="eng_title">Classic shampoo moisturizing</p>
+                    <span>₩32,000</span>
+                </div>
+                <div class="related_item">
+                    <img src="./img/service/product3.jpg" alt="">
+                    <p class="eng_title">Classic shampoo moisturizing</p>
+                    <span>₩32,000</span>
+                </div>
+                <div class="related_item">
+                    <img src="./img/service/product4.jpg" alt="">
+                    <p class="eng_title">Classic shampoo moisturizing</p>
+                    <span>₩32,000</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

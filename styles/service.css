@@ -1,0 +1,277 @@
+/* ================== 공통 ================== */
+main {
+    background: #F6F1E9;
+    color: #333;
+}
+
+/* ================== 상품 상단 ================== */
+.product_top {
+    display: flex;
+    gap: 80px;
+    padding: 120px 50px;
+}
+
+/* 이미지 */
+.product_img {}
+
+.product_img img {
+    width: 100%;
+    display: block;
+}
+
+/* 정보 */
+.product_info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product_name {
+    font-size: 2.00rem;
+    margin-bottom: 8px;
+}
+
+.product_sub {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.product_price {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.product_desc {
+    font-size: 1.38rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 42px;
+}
+
+/* ================== 옵션 ================== */
+.product_option {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+.product_option li {
+    border-bottom: 1px solid #eee;
+}
+
+.product_option li:last-child {
+    border-bottom: none;
+}
+
+.product_option label {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.product_option input {
+    display: none;
+}
+
+/* active */
+.product_option li.active {
+    font-weight: 600;
+}
+
+/* ================== 버튼 ================== */
+.product_btn {
+    display: flex;
+    gap: 40px;
+}
+
+.product_btn a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+/* 밑줄 */
+.product_btn a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: #333;
+    transition: 0.3s;
+}
+
+.product_btn a:hover::after {
+    width: 100%;
+}
+
+/* 화살표 */
+.product_btn img {
+    width: 16px;
+    transition: 0.3s;
+}
+
+.product_btn a:hover img {
+    transform: translateX(6px);
+}
+
+/* ================== 상세 섹션 ================== */
+.product_detail_content {
+    display: flex;
+    gap: 80px;
+    padding: 120px 50px;
+}
+
+/* 영상 */
+.detail_media {
+    width: 50%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.detail_media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 텍스트 */
+.detail_text {
+    width: 50%;
+}
+
+.detail_text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.detail_text p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.detail_info {
+    display: flex;
+    gap: 60px;
+}
+
+.detail_info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.detail_info p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ================== 사용법 ================== */
+.product_usage {
+    border-top: 1px solid #ddd;
+}
+
+.usage_wrap {
+    display: flex;
+    gap: 80px;
+    padding: 120px 50px;
+}
+
+.usage_img {
+    width: 50%;
+}
+
+.usage_img img {
+    width: 100%;
+    display: block;
+}
+
+.usage_text {
+    width: 50%;
+}
+
+.usage_text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.usage_text p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.usage_bottom {
+    display: flex;
+    gap: 80px;
+}
+
+.usage_bottom h4 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.usage_bottom p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ================== 풀 영상 ================== */
+.product_banner {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.product_banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================== 추천 상품 ================== */
+.product_related {
+    padding: 120px 50px;
+}
+
+.product_related h3 {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+/* 리스트 */
+.related_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* 카드 */
+.related_item img {
+    width: 100%;
+    margin-bottom: 16px;
+    transition: transform 0.5s ease;
+}
+
+.related_item:hover img {
+    transform: scale(1.04);
+}
+
+.related_item p {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.related_item span {
+    font-size: 0.9rem;
+    color: #555;
+}
