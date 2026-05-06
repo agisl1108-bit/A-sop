@@ -18,26 +18,28 @@
     <!--swiper 필수 JS cdn 연결-->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
         <div id="top_banner">
-            <div class="banner_txt">
-                <div class="banner_item">
+            <div class="banner_track">
+                <div class="banner_slide active">
                     <p>핸드 케어 및 향수 구매 시, 이솝 핸드 미러를 선물로 드립니다.</p>
-                    <a href="#"><span>자세히 알아보기</span></a>
+                    <a href="#">자세히 알아보기</a>
                 </div>
-                <div class="banner_item">
+                <div class="banner_slide">
                     <p>전 제품 무료 배송 혜택을 경험해보세요.</p>
-                    <a href="#"><span>자세히 알아보기</span></a>
+                    <a href="#">자세히 알아보기</a>
                 </div>
-                <div class="banner_item">
+                <div class="banner_slide">
                     <p>신제품 출시 기념 특별 프로모션 진행 중</p>
-                    <a href="#"><span>자세히 알아보기</span></a>
+                    <a href="#">자세히 알아보기</a>
                 </div>
             </div>
-            <button type="button" class="banner_close">&times;</button>
+            <button class="banner_close">&times;</button>
         </div>
         <div id="header_top">
             <div class="left">
@@ -51,13 +53,14 @@
                 <a href="#" class="icon cart"><img src="./img/shopping_cart.png" alt="장바구니"></a>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li class="menu">
+        <nav class="main_nav">
+            <ul class="gnb">
+                <!-- 기프트 -->
+                <li class="menu has_sub">
                     <a href="#">기프트 가이드</a>
-                    <div class="mega_menu_bg">
-                        <div class="mega_menu">
-                            <p>카테고리</p>
+                    <div class="submenu">
+                        <div class="col">
+                            <p>카테고리</p> <!-- 이거 추가 -->
                             <ul>
                                 <li><a href="#">시즈널 기프트 키트</a></li>
                                 <li><a href="#">시그니처 제품</a></li>
@@ -67,29 +70,280 @@
                                 <li><a href="#">기프트 전체 보기</a></li>
                             </ul>
                         </div>
-                        <div class="mega_right">
-                            <div class="mega_item">
-                                <a href="#">
-                                    <img src="./img/mega_item1.jpg" alt="">
-                                    <p>기프트 보기</p>
-                                </a>
-                            </div>
-                            <div class="mega_item">
-                                <a href="#">
-                                    <img src="./img/mega_item2.png" alt="">
-                                    <p>기프트 파인더</p>
-                                </a>
-                            </div>
+                        <!-- 이미지 유지 -->
+                        <div class="submenu_img">
+                            <a href="#">
+                                <img src="./img/mega_item1.jpg" alt="">
+                                <p>기프트 보기</p>
+                            </a>
+                            <a href="#">
+                                <img src="./img/mega_item2.png" alt="">
+                                <p>기프트 파인더</p>
+                            </a>
                         </div>
                     </div>
                 </li>
-                <li><a href="#">스킨 케어</a></li>
-                <li><a href="#">핸드 & 바디</a></li>
-                <li><a href="#">트래블</a></li>
-                <li><a href="#">향수</a></li>
-                <li><a href="#">헤어</a></li>
-                <li><a href="#">신제품 & 추천 제품</a></li>
-                <li><a href="#">라이브러리</a></li>
+                <!-- 스킨케어 -->
+                <li class="menu has_sub">
+                    <a href="#">스킨 케어</a>
+                    <div class="submenu">
+                        <div class="col">
+                            <p>카테고리</p>
+                            <ul>
+                                <li><a href="#">클렌저</a></li>
+                                <li><a href="#">토너</a></li>
+                                <li><a href="#">세럼</a></li>
+                                <li><a href="#">크림</a></li>
+                                <li><a href="#">립 & 아이</a></li>
+                                <li><a href="#">선 케어</a></li>
+                                <li><a href="#">마스크</a></li>
+                                <li><a href="#">쉐이빙</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>피부 상태</p>
+                            <ul>
+                                <li><a href="#">건조</a></li>
+                                <li><a href="#">에이징</a></li>
+                                <li><a href="#">트러블</a></li>
+                                <li><a href="#">톤 & 결</a></li>
+                                <li><a href="#">수분</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>피부 타입</p>
+                            <ul>
+                                <li><a href="#">건성</a></li>
+                                <li><a href="#">지성</a></li>
+                                <li><a href="#">복합성</a></li>
+                                <li><a href="#">민감성</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>성분</p>
+                            <ul>
+                                <li><a href="#">비타민 C</a></li>
+                                <li><a href="#">레티놀</a></li>
+                                <li><a href="#">판테놀</a></li>
+                                <li><a href="#">파슬리 씨드</a></li>
+                                <li><a href="#">위치 하젤</a></li>
+                            </ul>
+                        </div>
+                        <!-- 이미지 유지 -->
+                        <div class="submenu_img">
+                            <a href="#">
+                                <img src="./img/menu_Image/skincare1.jpg" alt="">
+                                <p>시즌 케어</p>
+                            </a>
+                            <a href="#">
+                                <img src="./img/menu_Image/skincare2.jpg" alt="">
+                                <p>피부 가이드</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <!-- 핸드&바디 -->
+                <li class="menu has_sub">
+                    <a href="#">핸드 & 바디</a>
+                    <div class="submenu">
+                        <div class="col">
+                            <p>카테고리</p>
+                            <ul>
+                                <li><a href="#">핸드</a></li>
+                                <li><a href="#">바디</a></li>
+                                <li><a href="#">클렌징</a></li>
+                                <li><a href="#">보습</a></li>
+                                <li><a href="#">데오도란트</a></li>
+                                <li><a href="#">키트</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>큐레이션</p>
+                            <ul>
+                                <li><a href="#">핸드 케어</a></li>
+                                <li><a href="#">바디 케어</a></li>
+                            </ul>
+                        </div>
+                        <!-- 이미지 유지 -->
+                        <div class="submenu_img">
+                            <a href="#">
+                                <img src="./img/menu_Image/hand1.jpg" alt="">
+                                <p>핸드 & 바디</p>
+                            </a>
+                            <a href="#">
+                                <img src="./img/menu_Image/hand2.jpg" alt="">
+                                <p>바디 케어 라인</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <!-- 트래블 -->
+                <li class="menu has_sub">
+                    <a href="#">트래블</a>
+                    <div class="submenu">
+                        <div class="col">
+                            <p>카테고리</p>
+                            <ul>
+                                <li><a href="#">기내</a></li>
+                                <li><a href="#">출퇴근</a></li>
+                                <li><a href="#">트래블</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>추천</p>
+                            <ul>
+                                <li><a href="#">핸드 케어</a></li>
+                                <li><a href="#">바디 케어</a></li>
+                                <li><a href="#">홈 케어</a></li>
+                            </ul>
+                        </div>
+                        <!-- 이미지 유지 -->
+                        <div class="submenu_img">
+                            <a href="#">
+                                <img src="./img/menu_Image/travel1.jpg" alt="">
+                                <p>시즌 케어</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <!-- 향수 -->
+                <li class="menu has_sub">
+                    <a href="#">향수</a>
+                    <div class="submenu">
+                        <div class="col">
+                            <p>카테고리</p>
+                            <ul>
+                                <li><a href="#">플로럴</a></li>
+                                <li><a href="#">프레시</a></li>
+                                <li><a href="#">우디</a></li>
+                                <li><a href="#">오리엔탈</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>큐레이션</p>
+                            <ul>
+                                <li><a href="#">가벼운 잔향</a></li>
+                                <li><a href="#">묵직한 잔향</a></li>
+                            </ul>
+                        </div>
+                        <!-- 이미지 유지 -->
+                        <div class="submenu_img">
+                            <a href="#">
+                                <img src="./img/menu_Image/perfume1.jpg" alt="">
+                                <p>향수</p>
+                            </a>
+                            <a href="#">
+                                <img src="./img/menu_Image/perfume2.jpg" alt="">
+                                <p>프래그런스 파인더</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <!-- 헤어 -->
+                <li class="menu has_sub">
+                    <a href="#">헤어</a>
+                    <div class="submenu">
+                        <div class="col">
+                            <p>카테고리</p>
+                            <ul>
+                                <li><a href="#">샴푸</a></li>
+                                <li><a href="#">컨디셔너</a></li>
+                                <li><a href="#">트리트먼트</a></li>
+                                <li><a href="#">스타일링</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>큐레이션</p>
+                            <ul>
+                                <li><a href="#">균형 케어</a></li>
+                                <li><a href="#">영양 케어</a></li>
+                            </ul>
+                        </div>
+                        <!-- 이미지 유지 -->
+                        <div class="submenu_img">
+                            <a href="#">
+                                <img src="./img/menu_Image/hair1.jpg" alt="">
+                                <p>기프트 보기</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <!-- 기타 -->
+                <li class="menu has_sub">
+                    <a href="#">신제품 & 추천 제품</a>
+                    <div class="submenu">
+                        <div class="col">
+                            <p>New</p>
+                            <ul>
+                                <li><a href="#">스킨 케어</a></li>
+                                <li><a href="#">바디 케어</a></li>
+                                <li><a href="#">프래그런스</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>큐레이션</p>
+                            <ul>
+                                <li><a href="#">보습 케어</a></li>
+                                <li><a href="#">진정 케어</a></li>
+                                <li><a href="#">향기 케어</a></li>
+                            </ul>
+                        </div>
+                        <!-- 이미지 유지 -->
+                        <div class="submenu_img">
+                            <a href="#">
+                                <img src="./img/menu_Image/new_product1.jpg" alt="">
+                                <p>아로마</p>
+                            </a>
+                            <a href="#">
+                                <img src="./img/menu_Image/new_product2.jpg" alt="">
+                                <p>피부 케어</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu has_sub">
+                    <a href="#">라이브러리</a>
+                    <div class="submenu">
+                        <div class="col">
+                            <p>카테고리</p>
+                            <ul>
+                                <li><a href="#">문화</a></li>
+                                <li><a href="#">제품 가이드</a></li>
+                                <li><a href="#">공간</a></li>
+                                <li><a href="#">비전</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>About</p>
+                            <ul>
+                                <li><a href="#">브랜드</a></li>
+                                <li><a href="#">디자인</a></li>
+                                <li><a href="#">제품</a></li>
+                            </ul>
+                        </div>
+                        <!-- 이미지 유지 -->
+                        <div class="submenu_img">
+                            <a href="#">
+                                <img src="./img/menu_Image/library1.jpg" alt="">
+                                <p>Film </p>
+                            </a>
+                            <a href="#">
+                                <img src="./img/menu_Image/library2.jpg" alt="">
+                                <p>Culture</p>
+                            </a>
+                            <a href="#">
+                                <img src="./img/menu_Image/library3.jpg" alt="">
+                                <p>Playlist</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>

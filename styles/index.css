@@ -254,7 +254,7 @@
 /* ===== scrollbar ===== */
 .curated .swiper-scrollbar {
     position: relative !important;
-    width: 280px !important;
+    width: 360px !important;
     margin: 60px auto 0;
     left: auto !important;
     transform: none !important;
@@ -288,7 +288,8 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    display: none;
+    color: #333;
+    font-size: 18px;
 }
 
 .swiper-button-disabled {
@@ -296,8 +297,8 @@
     pointer-events: none;
 }
 
-.swiper-button-prev .swiper-navigation-icon,
-.swiper-button-next .swiper-navigation-icon {color: #333; width: 30px; height: 30px;}
+/* .swiper-button-prev .swiper-notification,
+.swiper-button-next .swiper-notification {color: #333; width: 30px; height: 30px;} */
 
 /* ================== 브랜드 소개 ================== */
 .philosophy {
